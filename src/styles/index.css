@@ -1,0 +1,194 @@
+/* Main CSS Entry Point - ChessBase '26 Landing Page */
+
+/* Foundation */
+@import './variables.css';
+@import './base.css';
+@import './animations.css';
+@import './utilities.css';
+
+/* Components */
+@import './components/navbar.css';
+@import './components/hero.css';
+@import './components/feature-carousel.css';
+@import './components/features-grid.css';
+@import './components/opening-report.css';
+@import './components/monte-carlo.css';
+@import './components/consult-ai.css';
+@import './components/comparison-table.css';
+@import './components/testimonials.css';
+@import './components/stats.css';
+@import './components/pricing.css';
+@import './components/faq.css';
+@import './components/footer.css';
+@import './components/popup.css';
+@import './components/toast.css';
+@import './components/scroll-components.css';
+
+/* App Root Styles */
+.app {
+  min-height: 100vh;
+  background-color: white;
+  color: var(--gray-900);
+  font-family: var(--font-body);
+}
+
+/* Section common styles */
+.section {
+  padding: var(--space-16) 0;
+}
+
+.section--white {
+  background-color: white;
+}
+
+.section--grey {
+  background-color: var(--cb-grey);
+}
+
+.container {
+  max-width: var(--container-6xl);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+}
+
+/* Common Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-size: var(--text-2xl);
+  font-family: var(--font-display);
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--space-2);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title__underline {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background: var(--gradient-red);
+  border-radius: var(--radius-full);
+}
+
+.section-subtitle {
+  color: var(--gray-600);
+  margin-top: var(--space-4);
+}
+
+/* Common Image Hover Effect */
+.image-hover-container {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.image-hover-container__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-slower) var(--ease-default);
+}
+
+.image-hover-container:hover .image-hover-container__img {
+  transform: scale(1.1);
+}
+
+.image-hover-container__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-slow) var(--ease-default);
+}
+
+.image-hover-container:hover .image-hover-container__overlay {
+  opacity: 1;
+}
+
+/* Common Gradient Border Box */
+.gradient-border-box {
+  background: var(--gradient-red);
+  padding: 3px;
+  border-radius: var(--radius-lg);
+}
+
+.gradient-border-box__inner {
+  background-color: white;
+  border-radius: calc(var(--radius-lg) - 3px);
+  overflow: hidden;
+}
+
+/* Common Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: var(--font-semibold);
+  transition: all var(--transition-normal) var(--ease-default);
+}
+
+.btn--primary {
+  background: var(--gradient-red);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn--primary:hover {
+  background: var(--gradient-red-hover);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-0.25rem);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  border: 2px solid var(--gray-300);
+  color: var(--gray-700);
+}
+
+.btn--secondary:hover {
+  border-color: var(--cb-red);
+  color: var(--cb-red);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  border-radius: var(--radius-default);
+}
+
+.btn--md {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-base);
+  border-radius: var(--radius-default);
+}
+
+.btn--lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-base);
+  border-radius: var(--radius-default);
+}

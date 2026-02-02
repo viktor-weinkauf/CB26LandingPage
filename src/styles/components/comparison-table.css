@@ -1,0 +1,230 @@
+/* Comparison Table Component Styles */
+
+.comparison-table {
+  padding: var(--space-16) 0;
+  background-color: white;
+}
+
+.comparison-table__container {
+  max-width: var(--container-6xl);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+  padding-bottom: var(--space-8);
+}
+
+.comparison-table__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.comparison-table__title {
+  font-size: var(--text-2xl);
+  font-family: var(--font-display);
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--space-2);
+  position: relative;
+  display: inline-block;
+}
+
+.comparison-table__title-underline {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background: var(--gradient-red);
+  border-radius: var(--radius-full);
+}
+
+.comparison-table__subtitle {
+  color: var(--gray-600);
+  margin-top: var(--space-4);
+}
+
+/* Table Wrapper */
+.comparison-table__wrapper {
+  background-color: white;
+  border: 1px solid var(--cb-border);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.comparison-table__table {
+  width: 100%;
+  min-width: 500px;
+}
+
+/* Table Header */
+.comparison-table__thead {
+  background-color: var(--cb-charcoal);
+  color: white;
+}
+
+.comparison-table__th {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.comparison-table__th--feature {
+  text-align: left;
+  font-weight: var(--font-semibold);
+}
+
+.comparison-table__th--version {
+  text-align: center;
+  font-weight: var(--font-medium);
+  width: 5rem;
+  white-space: nowrap;
+}
+
+.comparison-table__th--highlight {
+  background: var(--gradient-red);
+  font-weight: var(--font-bold);
+}
+
+/* Table Body */
+.comparison-table__tbody > tr {
+  border-top: 1px solid var(--cb-border);
+}
+
+.comparison-table__row {
+  transition: all var(--transition-normal) var(--ease-default);
+}
+
+.comparison-table__row:hover {
+  background: linear-gradient(to right, rgba(254, 242, 242, 0.5), transparent);
+}
+
+.comparison-table__td {
+  padding: var(--space-3) var(--space-4);
+}
+
+.comparison-table__td--feature {
+  font-size: var(--text-sm);
+  color: var(--gray-700);
+}
+
+.comparison-table__td--center {
+  text-align: center;
+}
+
+.comparison-table__td--highlight {
+  background-color: var(--red-50);
+}
+
+.comparison-table__note {
+  font-size: var(--text-xs);
+  margin-left: var(--space-1);
+  background: var(--gradient-red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Cell Values */
+.comparison-table__check {
+  font-weight: var(--font-bold);
+}
+
+.comparison-table__check--active {
+  color: var(--green-600);
+}
+
+.comparison-table__check--inactive {
+  color: var(--gray-400);
+}
+
+.comparison-table__dash {
+  color: var(--gray-300);
+}
+
+.comparison-table__value {
+  font-size: var(--text-sm);
+}
+
+.comparison-table__value--highlight {
+  font-weight: var(--font-medium);
+  color: var(--gray-900);
+}
+
+.comparison-table__value--muted {
+  color: var(--gray-500);
+}
+
+/* Footer Note */
+.comparison-table__footer {
+  margin-top: var(--space-4);
+  text-align: right;
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+}
+
+.comparison-table__footer-star {
+  color: var(--cb-red);
+}
+
+/* Responsive */
+@media (max-width: 639px) {
+  .comparison-table {
+    padding: var(--space-8) 0;
+  }
+
+  .comparison-table__container {
+    padding-left: var(--space-2);
+    padding-right: var(--space-2);
+  }
+
+  .comparison-table__table {
+    min-width: auto;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .comparison-table__th,
+  .comparison-table__td {
+    padding: var(--space-2) var(--space-1);
+    font-size: 0.65rem;
+  }
+
+  .comparison-table__th--feature,
+  .comparison-table__td--feature {
+    width: 55%;
+  }
+
+  .comparison-table__th--version {
+    width: 15%;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .comparison-table__td--feature {
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .comparison-table__value {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .comparison-table__container {
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+
+  .comparison-table__table {
+    min-width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .comparison-table__container {
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+}

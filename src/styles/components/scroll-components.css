@@ -1,0 +1,235 @@
+/* Scroll Components - ScrollProgress, ScrollReveal, LazyImage, FloatingChessPieces */
+
+/* ========================================
+   SCROLL PROGRESS
+   ======================================== */
+
+.scroll-progress {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.25rem;
+  background-color: var(--gray-200);
+  z-index: var(--z-sticky);
+}
+
+.scroll-progress__bar {
+  height: 100%;
+  background: linear-gradient(to right, #de0e1f, #B51634, #0099da);
+  transition: all 150ms ease-out;
+}
+
+/* ========================================
+   SCROLL REVEAL
+   ======================================== */
+
+.scroll-reveal {
+  transition: all var(--transition-slowest) var(--ease-default);
+}
+
+/* Hidden states */
+.scroll-reveal--hidden-fade {
+  opacity: 0;
+}
+
+.scroll-reveal--hidden-slide-up {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.scroll-reveal--hidden-slide-left {
+  opacity: 0;
+  transform: translateX(-2rem);
+}
+
+.scroll-reveal--hidden-slide-right {
+  opacity: 0;
+  transform: translateX(2rem);
+}
+
+.scroll-reveal--hidden-scale {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+/* Visible state */
+.scroll-reveal--visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* ========================================
+   LAZY IMAGE
+   ======================================== */
+
+.lazy-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.lazy-image__placeholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, var(--gray-200), var(--gray-300));
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.lazy-image__img {
+  width: 100%;
+  height: 100%;
+  transition: opacity var(--transition-slower) var(--ease-default);
+}
+
+.lazy-image__img--loading {
+  opacity: 0;
+}
+
+.lazy-image__img--loaded {
+  opacity: 1;
+}
+
+/* ========================================
+   LAZY BACKGROUND IMAGE
+   ======================================== */
+
+.lazy-bg {
+  transition: all var(--transition-slowest) var(--ease-default);
+}
+
+.lazy-bg--loading {
+  background-color: #e5e7eb;
+}
+
+.lazy-bg--loaded {
+  background-color: transparent;
+}
+
+/* ========================================
+   FLOATING CHESS PIECES
+   ======================================== */
+
+.floating-pieces {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.02;
+  user-select: none;
+}
+
+.floating-piece {
+  position: absolute;
+  color: var(--cb-charcoal);
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-piece--1 {
+  top: 2.5rem;
+  left: 2.5rem;
+  font-size: var(--text-9xl);
+  animation-delay: 0s;
+  animation-duration: 8s;
+}
+
+.floating-piece--2 {
+  top: 5rem;
+  right: 5rem;
+  font-size: var(--text-8xl);
+  animation-delay: 1s;
+  animation-duration: 10s;
+}
+
+.floating-piece--3 {
+  top: 33.333333%;
+  left: 25%;
+  font-size: var(--text-7xl);
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.floating-piece--4 {
+  top: 50%;
+  right: 33.333333%;
+  font-size: var(--text-8xl);
+  animation-delay: 3s;
+  animation-duration: 9s;
+}
+
+.floating-piece--5 {
+  bottom: 25%;
+  left: 33.333333%;
+  font-size: var(--text-9xl);
+  animation-delay: 4s;
+  animation-duration: 11s;
+}
+
+.floating-piece--6 {
+  bottom: 5rem;
+  right: 25%;
+  font-size: var(--text-7xl);
+  animation-delay: 5s;
+  animation-duration: 10s;
+}
+
+.floating-piece--7 {
+  top: 66.666667%;
+  left: 2.5rem;
+  font-size: var(--text-6xl);
+  animation-delay: 6s;
+  animation-duration: 13s;
+}
+
+.floating-piece--8 {
+  bottom: 33.333333%;
+  right: 2.5rem;
+  font-size: var(--text-6xl);
+  animation-delay: 7s;
+  animation-duration: 14s;
+}
+
+/* ========================================
+   SCROLL TO TOP BUTTON
+   ======================================== */
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  width: 3rem;
+  height: 3rem;
+  background: var(--gradient-red);
+  color: white;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-slow) var(--ease-default);
+}
+
+.scroll-top-btn:hover {
+  background: var(--gradient-red-hover);
+  box-shadow: var(--shadow-2xl);
+  transform: scale(1.1) translateY(-0.25rem);
+}
+
+.scroll-top-btn--visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scroll-top-btn--hidden {
+  opacity: 0;
+  transform: scale(0);
+  pointer-events: none;
+}
+
+/* ========================================
+   MAGNETIC BUTTON
+   ======================================== */
+
+.magnetic-btn {
+  transition: transform var(--transition-normal) ease-out;
+}

@@ -1,0 +1,317 @@
+/* Pricing Component Styles */
+
+.pricing {
+  padding: var(--space-8) 0;
+  background-color: white;
+}
+
+.pricing__container {
+  max-width: var(--container-6xl);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+  padding-bottom: var(--space-8);
+  border-bottom: 2px solid #666;
+}
+
+.pricing__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.pricing__title {
+  font-size: var(--text-2xl);
+  font-family: var(--font-display);
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--space-2);
+  position: relative;
+  display: inline-block;
+}
+
+.pricing__title-underline {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background: var(--gradient-red);
+  border-radius: var(--radius-full);
+}
+
+.pricing__subtitle {
+  color: var(--gray-600);
+  margin-top: var(--space-4);
+}
+
+/* Grid */
+.pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: var(--space-6);
+  max-width: var(--container-7xl);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Pricing Card */
+.pricing-card {
+  background-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-slow) var(--ease-default);
+}
+
+.pricing-card:hover {
+  transform: scale(1.05) translateY(-0.5rem);
+  box-shadow: var(--shadow-2xl);
+}
+
+.pricing-card--gray {
+  border-color: var(--gray-300);
+}
+
+.pricing-card--blue {
+  border-color: var(--blue-400);
+}
+
+.pricing-card--red {
+  border-color: var(--cb-red);
+}
+
+.pricing-card--red:hover {
+  transform: scale(1.1) translateY(-0.75rem);
+}
+
+.pricing-card--gold {
+  border-color: var(--yellow-500);
+}
+
+/* Card Header */
+.pricing-card__header {
+  color: white;
+  padding: var(--space-4) var(--space-6);
+  text-align: center;
+}
+
+.pricing-card__header--gray {
+  background: var(--gradient-gray);
+}
+
+.pricing-card__header--blue {
+  background: var(--gradient-blue);
+}
+
+.pricing-card__header--red {
+  background: var(--gradient-red);
+}
+
+.pricing-card__header--gold {
+  background: var(--gradient-orange);
+}
+
+.pricing-card__label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--space-1);
+}
+
+.pricing-card__label--invisible {
+  visibility: hidden;
+}
+
+.pricing-card__name {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+}
+
+/* Price Section */
+.pricing-card__price-section {
+  padding: var(--space-6);
+  text-align: center;
+  border-bottom: 1px solid var(--cb-border);
+}
+
+.pricing-card__price {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+  font-family: var(--font-sans);
+}
+
+.pricing-card__price-note {
+  color: var(--gray-500);
+  font-size: var(--text-sm);
+  margin-top: var(--space-1);
+}
+
+/* Features Section */
+.pricing-card__features-section {
+  padding: var(--space-6);
+}
+
+.pricing-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.pricing-card__feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.pricing-card__feature-icon {
+  font-weight: var(--font-bold);
+}
+
+.pricing-card__feature-icon--included {
+  color: var(--green-600);
+}
+
+.pricing-card__feature-icon--excluded {
+  color: var(--gray-300);
+}
+
+.pricing-card__feature-text--included {
+  color: var(--gray-700);
+}
+
+.pricing-card__feature-text--excluded {
+  color: var(--gray-400);
+}
+
+.pricing-card__feature-note {
+  color: var(--cb-red);
+}
+
+/* CTA Button */
+.pricing-card__cta {
+  display: block;
+  width: 100%;
+  margin-top: var(--space-6);
+  color: white;
+  font-weight: var(--font-bold);
+  padding: var(--space-4);
+  text-align: center;
+  border-radius: var(--radius-default);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal) var(--ease-default);
+  font-family: var(--font-sans);
+}
+
+.pricing-card__cta:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.pricing-card__cta--gray {
+  background: var(--gradient-gray);
+}
+
+.pricing-card__cta--gray:hover {
+  background: linear-gradient(to right, #4b5563, #374151);
+}
+
+.pricing-card__cta--blue {
+  background: var(--gradient-blue);
+}
+
+.pricing-card__cta--blue:hover {
+  background: linear-gradient(to right, #007ab8, #005a8f);
+}
+
+.pricing-card__cta--red {
+  background: var(--gradient-red);
+}
+
+.pricing-card__cta--red:hover {
+  background: var(--gradient-red-hover);
+}
+
+.pricing-card__cta--gold {
+  background: var(--gradient-orange);
+}
+
+.pricing-card__cta--gold:hover {
+  background: linear-gradient(to right, #b45309, #92400e);
+}
+
+.pricing-card__footer {
+  text-align: center;
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  margin-top: var(--space-4);
+}
+
+/* Upgrade Note */
+.pricing__upgrade-note {
+  margin-top: var(--space-8);
+  text-align: center;
+}
+
+.pricing__upgrade-text {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+}
+
+.pricing__upgrade-link {
+  color: var(--cb-blue);
+  font-weight: var(--font-medium);
+}
+
+.pricing__upgrade-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 639px) {
+  .pricing__header {
+    margin-bottom: var(--space-6);
+  }
+
+  .pricing-card:hover {
+    transform: none;
+  }
+
+  .pricing-card--red:hover {
+    transform: none;
+  }
+
+  .pricing-card__cta {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 640px) {
+  .pricing__container {
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+}
+
+@media (min-width: 768px) {
+  .pricing__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .pricing__container {
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+
+  .pricing__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,164 @@
+/* Consult AI Component Styles */
+
+.consult-ai {
+  padding: var(--space-8) 0;
+  background: linear-gradient(to bottom, white, rgba(250, 245, 255, 0.1), white);
+}
+
+.consult-ai__container {
+  max-width: var(--container-6xl);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+  padding-bottom: var(--space-8);
+  border-bottom: 2px solid #666;
+}
+
+.consult-ai__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.consult-ai__title {
+  font-size: var(--text-3xl);
+  font-family: var(--font-display);
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--space-3);
+  position: relative;
+  display: inline-block;
+}
+
+.consult-ai__title-underline {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background: var(--gradient-red);
+  border-radius: var(--radius-full);
+}
+
+.consult-ai__subtitle {
+  color: var(--gray-600);
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Screenshot */
+.consult-ai__screenshot-wrapper {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+}
+
+.consult-ai__screenshot-border {
+  background: var(--gradient-red);
+  padding: 3px;
+  border-radius: var(--radius-lg);
+}
+
+.consult-ai__screenshot-inner {
+  position: relative;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.consult-ai__screenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-slower) var(--ease-default);
+}
+
+.consult-ai__screenshot-inner:hover .consult-ai__screenshot {
+  transform: scale(1.1);
+}
+
+.consult-ai__screenshot-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-slow) var(--ease-default);
+}
+
+.consult-ai__screenshot-inner:hover .consult-ai__screenshot-overlay {
+  opacity: 1;
+}
+
+/* Features Grid */
+.consult-ai__features {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: var(--space-6);
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.consult-ai__feature {
+  text-align: center;
+  padding: var(--space-6);
+  background-color: var(--cb-grey);
+  border-radius: var(--radius-lg);
+}
+
+.consult-ai__feature-title {
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.consult-ai__feature-text {
+  color: var(--gray-600);
+  font-size: var(--text-sm);
+}
+
+/* Responsive */
+@media (max-width: 639px) {
+  .consult-ai__header {
+    margin-bottom: var(--space-6);
+  }
+
+  .consult-ai__title {
+    font-size: var(--text-2xl);
+  }
+
+  .consult-ai__screenshot-wrapper {
+    margin-bottom: var(--space-6);
+  }
+
+  .consult-ai__features {
+    gap: var(--space-4);
+  }
+
+  .consult-ai__feature {
+    padding: var(--space-4);
+  }
+}
+
+@media (min-width: 640px) {
+  .consult-ai__container {
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+}
+
+@media (min-width: 768px) {
+  .consult-ai__features {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .consult-ai__container {
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+}

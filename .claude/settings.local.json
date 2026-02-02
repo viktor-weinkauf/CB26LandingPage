@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:en.chessbase.com)",
+      "Bash(dir:*)",
+      "Bash(npm run dev:*)",
+      "Bash(if [ -d \"node_modules\" ])",
+      "Bash(then echo \"Dependencies already installed\")",
+      "Bash(else echo \"Need to install dependencies\")",
+      "Bash(fi)",
+      "WebFetch(domain:shop.chessbase.com)",
+      "Bash(ls:*)",
+      "Bash(npm install)",
+      "Bash(test:*)",
+      "Bash(timeout:*)",
+      "Bash(npm run build:*)",
+      "Bash(find:*)",
+      "Bash(where:*)",
+      "Bash(magick:*)"
+    ]
+  }
+}
